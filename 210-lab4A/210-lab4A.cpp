@@ -20,28 +20,44 @@ int main()
     //formula for 25-50: rand()%(high - low + 1) + low
     int n = rand() % 26 + 25;
 
-    vector<Color> colors;
+    vector<Color> colors; //creates nempty vector
 
     for (int i = 0; i < n; i++) {
-        Color temp;
+        Color temp; //temp struct
         temp.red = rand() % 256;
         temp.green = rand() % 256;
         temp.blue = rand() % 256;
 
-        colors.push_back(temp);
+        colors.push_back(temp); //randomized color struct appends to vector 
     }
     
-    coutColors(colors);
+    coutColors(colors); //calls output function
 
 }
 
-void coutColors(vector<Color> colors) {
-    cout << "Color#   R value   G value   B value" << endl;
+void coutColors(vector<Color> colors) { //outputs rgb values in an orgnanized table
+    cout << "Color#   R value   G value   B value" << endl; 
     cout << "-----    -------   -------   -------" << endl;
 
-    for (int i = 1; i < colors.size() + 1 ; i++) {
-        cout << i << "        " << colors[i].red
-             << "        " << colors[i].green
-             << "        " << colors[i].blue << endl;
+    for (int i = 0; i < colors.size(); i++) {
+        cout.width(5);
+        cout << i + 1;
+
+        cout << "    ";
+        cout.width(7);
+        cout << colors[i].red;
+
+        cout << "   ";
+        cout.width(7);
+        cout << colors[i].green;
+
+        cout << "   ";
+        cout.width(7);
+        cout << colors[i].blue;
+
+        cout << endl;
+
     }
+
+    cout << endl;
 }
