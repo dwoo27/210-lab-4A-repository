@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 struct Color {
@@ -14,7 +15,10 @@ int main()
     c.green = 200;
     c.blue = 50;
 
-    cout << "R: " << c.red << endl;
-    cout << "G: " << c.green << endl;
-    cout << "B: " << c.blue << endl;
+    vector<Color> colors;
+    colors.push_back(c);
+
+    cout << "R: " << colors[0].red << endl;
+    cout << "G: " << colors[0].green << endl;
+    cout << "B: " << colors[0].blue << endl;
 }
