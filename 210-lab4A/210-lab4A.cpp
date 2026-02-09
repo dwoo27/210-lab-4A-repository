@@ -11,6 +11,8 @@ struct Color {
     int blue;
 };
 
+void coutColors(vector<Color> colors);
+
 int main()
 {
     srand(time(0));
@@ -34,5 +36,11 @@ int main()
         cout << "G: " << colors[i].green;
         cout << "B: " << colors[i].blue << endl;
     }
+
+}
+
+void coutColors(vector<Color> colors) {
+    cout << "Color#   R value   G value   B value" << endl;
+    cout << "-----    -------   -------   -------" << endl;
 
 }
