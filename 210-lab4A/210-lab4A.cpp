@@ -1,5 +1,8 @@
 #include <iostream>
 #include <vector>
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
 
 struct Color {
@@ -10,6 +13,9 @@ struct Color {
 
 int main()
 {
+    srand(time(0));
+    //formula for 25-50: rand()%(high - low + 1) + low
+
     Color c; 
     c.red = 100;
     c.green = 200;
