@@ -14,17 +14,25 @@ struct Color {
 int main()
 {
     srand(time(0));
+    
     //formula for 25-50: rand()%(high - low + 1) + low
-
-    Color c; 
-    c.red = 100;
-    c.green = 200;
-    c.blue = 50;
+    int n = rand() % 26 + 25;
 
     vector<Color> colors;
-    colors.push_back(c);
 
-    cout << "R: " << colors[0].red << endl;
-    cout << "G: " << colors[0].green << endl;
-    cout << "B: " << colors[0].blue << endl;
+    for (int i = 0; i < n; i++) {
+        Color temp;
+        temp.red = rand() % 256;
+        temp.green = rand() % 256;
+        temp.blue = rand() % 256;
+
+        colors.push_back(temp);
+    }
+
+    for (int i = 0; i < n; i++) {
+        cout << "R: " << colors[i].red;
+        cout << "G: " << colors[i].green;
+        cout << "B: " << colors[i].blue << endl;
+    }
+
 }
